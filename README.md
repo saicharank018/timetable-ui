@@ -1,7 +1,4 @@
 
-# Where To Try
-
-https://positive235.github.io/todolist-react/
 
 # Getting Started with Create React App
 
