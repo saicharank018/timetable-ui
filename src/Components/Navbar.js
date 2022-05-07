@@ -25,17 +25,19 @@ const Navbar = () => {
                         <div className="offcanvas-body">
                         <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
                             <li className="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
-                                <Link to="/home" class="nav-link text-truncate">
-                                    <i class="fs-5 bi-house"></i><span class="ms-1 d-none d-sm-inline">Home</span>
+                                <Link to="/home/dashboard" class="nav-link text-truncate">
+                                    <i class="fs-5 bi-house"></i><span class="ms-1 d-none d-sm-inline">Dashboard</span>
                                 </Link>
                             </li>
                             <li className="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
-                                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link text-truncate">
-                                    <i class="fs-5 bi-speedometer2"></i><span class="ms-1 d-none d-sm-inline">Subjects</span> </a>
+                            <Link to="/home/courses" class="nav-link text-truncate">
+                                    <i class="fs-5 bi-house"></i><span class="ms-1 d-none d-sm-inline">Courses</span>
+                                </Link>
                             </li>
                             <li className="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
-                                <a href="#" class="nav-link text-truncate">
-                                    <i class="fs-5 bi-table"></i><span class="ms-1 d-none d-sm-inline">Lecturers</span></a>
+                            <Link to="/home/lecturers" class="nav-link text-truncate">
+                                    <i class="fs-5 bi-house"></i><span class="ms-1 d-none d-sm-inline">Lecturers</span>
+                                </Link>
                             </li>
                             <li className="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
                                 <a href="#" class="nav-link text-truncate">
