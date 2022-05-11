@@ -150,7 +150,7 @@ export const MappingLab = (props) => {
           </button>
         </div>
       </form>
-      <div style={{ marginTop: "20px", marginLeft: "10%", marginRight: "10%" }}>
+      <div className="data-list">
         <div
           className="top-header"
           style={{ height: "auto", overflowY: "scroll", overflowX: "hidden" }}
@@ -169,7 +169,7 @@ export const MappingLab = (props) => {
         <div
           className="bottom"
           style={{
-            height: "100px",
+            height: "200px",
             overflowY: "scroll",
             overflowX: "hidden",
             marginTop: "0px",

@@ -179,7 +179,7 @@ const Courses = () => {
           </button>
         </div>
       </form>
-      <div style={{ marginTop: "20px" }}>
+      <div className="data-list">
         <div
           className="top-header"
           style={{ height: "auto", overflowY: "scroll", overflowX: "hidden" }}
@@ -198,7 +198,7 @@ const Courses = () => {
         <div
           className="bottom"
           style={{
-            height: "100px",
+            height: "200px",
             overflowY: "scroll",
             overflowX: "hidden",
             marginTop: "0px",

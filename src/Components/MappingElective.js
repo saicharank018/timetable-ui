@@ -115,15 +115,13 @@ export const MappingElective = (props) => {
           </button>
         </div>
       </form>
-      <div style={{ marginTop: "20px" }}>
+      <div className="data-list">
         <div
           className="top-header"
           style={{
             height: "auto",
             overflowY: "scroll",
             overflowX: "hidden",
-            marginLeft: "10%",
-            marginRight: "10%",
           }}
         >
           <ul
@@ -138,12 +136,10 @@ export const MappingElective = (props) => {
         <div
           className="bottom"
           style={{
-            height: "100px",
+            height: "200px",
             overflowY: "scroll",
             overflowX: "hidden",
             marginTop: "0px",
-            marginLeft: "10%",
-            marginRight: "10%",
           }}
         >
           {electives.map((item) => {

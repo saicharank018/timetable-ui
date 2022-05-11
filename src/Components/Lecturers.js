@@ -20,6 +20,8 @@ const Professors = () => {
     { prof_id: "1", prof_name: "Professor-1", prof_dept: "Department-1" },
     { prof_id: "2", prof_name: "Professor-2", prof_dept: "Department-2" },
     { prof_id: "3", prof_name: "Professor-3", prof_dept: "Department-3" },
+    { prof_id: "3", prof_name: "Professor-3", prof_dept: "Department-3" },
+    { prof_id: "3", prof_name: "Professor-3", prof_dept: "Department-3" },
   ]);
   const addProf = () => {
     // if (prof_id == "" || prof_name == "" || prof_dept == "") {
@@ -122,7 +124,7 @@ const Professors = () => {
           </button>
         </div>
       </form>
-      <div style={{ marginTop: "20px", marginLeft: "10%", marginRight: "10%" }}>
+      <div className="data-list">
         <div
           className="top-header"
           style={{ height: "auto", overflowY: "scroll", overflowX: "hidden" }}
@@ -141,7 +143,7 @@ const Professors = () => {
         <div
           className="bottom"
           style={{
-            height: "100px",
+            height: "200px",
             overflowY: "scroll",
             overflowX: "hidden",
             marginTop: "0px",
