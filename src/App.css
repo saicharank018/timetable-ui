@@ -171,3 +171,10 @@
     width: 210px !important;
     background-color: blue;
   }
+
+  .top-header::-webkit-scrollbar {
+    display: none;
+}
+  .bottom::-webkit-scrollbar {
+    display: none;
+}
