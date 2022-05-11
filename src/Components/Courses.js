@@ -3,14 +3,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
+/**
+ * @author Saicharan
+ * @function Courses
+ **/
+
 const Courses = () => {
   const [course_id, setCourseId] = useState("");
   const [course_name, setCourseName] = useState("");
   const [course_short_form, setCourseShortForm] = useState("");
-  const [course_duration, setCourseDuration] = useState("");
-  const [course_frequency, setCourseFrequency] = useState("");
-  const [course_type, setCourseType] = useState("");
-  const [course_rooms, setCourseRooms] = useState("");
+  const [course_type, setCourseType] = useState(""); //dropdown
+  const [course_rooms, setCourseRooms] = useState(""); // will be active for only lab
   const [refreshKey, setRefreshKey] = useState(0);
 
   const [courses, setCourses] = useState([
@@ -31,6 +34,24 @@ const Courses = () => {
       course_duration: "3",
       course_frequency: "1",
       course_rooms: "A102",
+    },
+    {
+      course_id: "3",
+      course_name: "Course-3",
+      course_short_form: "C3",
+      course_type: "Elective",
+      course_duration: "2",
+      course_frequency: "2",
+      course_rooms: "A103",
+    },
+    {
+      course_id: "3",
+      course_name: "Course-3",
+      course_short_form: "C3",
+      course_type: "Elective",
+      course_duration: "2",
+      course_frequency: "2",
+      course_rooms: "A103",
     },
     {
       course_id: "3",
@@ -140,20 +161,7 @@ const Courses = () => {
             className="addInputBar"
             placeholder="Enter Course Type"
           />
-          <input
-            value={course_frequency}
-            onChange={(e) => setCourseFrequency(e.target.value)}
-            type="text"
-            className="addInputBar"
-            placeholder="Enter Frequency"
-          />
-          <input
-            value={course_duration}
-            onChange={(e) => setCourseDuration(e.target.value)}
-            type="text"
-            className="addInputBar"
-            placeholder="Enter Duration"
-          />
+
           <input
             value={course_rooms}
             onChange={(e) => setCourseRooms(e.target.value)}
@@ -170,45 +178,50 @@ const Courses = () => {
             <FontAwesomeIcon icon={faPlus} />
           </button>
         </div>
-        <div className="tableView">
-          <table id="table" rules={"all"}>
-            <thead>
-              <tr>
-                <th>Course Id</th>
-                <th>Course Name</th>
-                <th>Course Short Form</th>
-                <th>Course Type</th>
-                <th>Duration</th>
-                <th>Frequency</th>
-                <th>Preferred Rooms</th>
-              </tr>
-            </thead>
-            <tbody>
-              {courses.map((item) => (
-                <tr>
-                  <td>{item.course_id}</td>
-                  <td>{item.course_name}</td>
-                  <td>{item.course_short_form}</td>
-                  <td>{item.course_type}</td>
-                  <td>{item.course_duration}</td>
-                  <td>{item.course_frequency}</td>
-                  <td>{item.course_rooms}</td>
-                  <td>
-                    <button
-                      className="toDoButton deleteButton col"
-                      onClick={() => {
-                        deleteProf(item.course_id);
-                      }}
-                    >
-                      <FontAwesomeIcon icon={faTrashAlt} />
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
       </form>
+      <div style={{ marginTop: "20px" }}>
+        <div
+          className="top-header"
+          style={{ height: "auto", overflowY: "scroll", overflowX: "hidden" }}
+        >
+          <ul
+            className=" view list-group list-group-horizontal"
+            style={{ marginLeft: "auto", marginRight: "auto" }}
+          >
+            <li className="list-group-item">Course Id</li>
+            <li className="list-group-item">Course Name</li>
+            <li className="list-group-item">Course Short Form</li>
+            <li className="list-group-item">Course Type</li>
+            <li className="list-group-item">Course Delete</li>
+          </ul>
+        </div>
+        <div
+          className="bottom"
+          style={{
+            height: "100px",
+            overflowY: "scroll",
+            overflowX: "hidden",
+            marginTop: "0px",
+          }}
+        >
+          {courses.map((item) => {
+            return (
+              <ul
+                className=" view list-group list-group-horizontal"
+                style={{ marginLeft: "auto", marginRight: "auto" }}
+              >
+                <li className="list-group-item">{item.course_id}</li>
+                <li className="list-group-item">{item.course_name}</li>
+                <li className="list-group-item">{item.course_short_form}</li>
+                <li className="list-group-item">{item.course_type}</li>
+                <li className="list-group-item">
+                  <button onClick={() => {}}>delete</button>
+                </li>
+              </ul>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

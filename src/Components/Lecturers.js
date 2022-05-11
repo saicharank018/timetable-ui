@@ -121,37 +121,50 @@ const Professors = () => {
             <FontAwesomeIcon icon={faPlus} />
           </button>
         </div>
-        <div className="tableView">
-          <table id="table" rules={"all"}>
-            <thead>
-              <tr>
-                <th>Professor Id</th>
-                <th>Professor Name</th>
-                <th>Professor Department</th>
-              </tr>
-            </thead>
-            <tbody>
-              {professors.map((item) => (
-                <tr>
-                  <td>{item.prof_id} </td>
-                  <td>{item.prof_name} </td>
-                  <td>{item.prof_dept} </td>
-                  <td>
-                    <button
-                      className="toDoButton deleteButton col"
-                      onClick={() => {
-                        deleteProf(item.prof_id);
-                      }}
-                    >
-                      <FontAwesomeIcon icon={faTrashAlt} />
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
       </form>
+      <div style={{ marginTop: "20px", marginLeft: "10%", marginRight: "10%" }}>
+        <div
+          className="top-header"
+          style={{ height: "auto", overflowY: "scroll", overflowX: "hidden" }}
+        >
+          <ul
+            className=" view list-group list-group-horizontal"
+            style={{ marginLeft: "auto", marginRight: "auto" }}
+          >
+            <li className="list-group-item">Professor Id</li>
+
+            <li className="list-group-item">Professor Name</li>
+            <li className="list-group-item">Professor Department</li>
+            <li className="list-group-item">Delete Professor</li>
+          </ul>
+        </div>
+        <div
+          className="bottom"
+          style={{
+            height: "100px",
+            overflowY: "scroll",
+            overflowX: "hidden",
+            marginTop: "0px",
+          }}
+        >
+          {professors.map((item) => {
+            return (
+              <ul
+                className=" view list-group list-group-horizontal"
+                style={{ marginLeft: "auto", marginRight: "auto" }}
+              >
+                <li className="list-group-item">{item.prof_id}</li>
+
+                <li className="list-group-item">{item.prof_name}</li>
+                <li className="list-group-item">{item.prof_dept}</li>
+                <li className="list-group-item">
+                  <button onClick={() => {}}>delete</button>
+                </li>
+              </ul>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
