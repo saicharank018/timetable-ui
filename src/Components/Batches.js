@@ -110,7 +110,7 @@ export const Batch = (props) => {
       <form>
         <div className="batches">
           <select
-            className="select-style"
+            className=" form-select-md select-style"
             value={batch_year}
             onChange={(e) => setBatchYear(e.target.value)}
           >
@@ -120,7 +120,7 @@ export const Batch = (props) => {
             })}
           </select>
           <select
-            className="select-style"
+            className=" form-select-md select-style"
             value={batch_dept}
             onChange={(e) => setBatchDept(e.target.value)}
           >
@@ -130,7 +130,7 @@ export const Batch = (props) => {
             })}
           </select>
           <select
-            className="select-style"
+            className=" form-select-md select-style"
             value={batch_section}
             onChange={(e) => setBatchSection(e.target.value)}
           >
@@ -140,7 +140,7 @@ export const Batch = (props) => {
             })}
           </select>
           <select
-            className="select-style"
+            className="form-select-md select-style"
             value={batch_room}
             onChange={(e) => setBatchRoom(e.target.value)}
           >

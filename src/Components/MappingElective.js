@@ -87,7 +87,7 @@ export const MappingElective = (props) => {
       <form>
         <div className="batches">
           <select
-            className="select-style"
+            className="form-select-md select-style"
             value={course}
             onChange={(e) => setCourse(e.target.value)}
           >
@@ -97,7 +97,7 @@ export const MappingElective = (props) => {
             })}
           </select>
           <select
-            className="select-style"
+            className="form-select-md select-style"
             value={professor}
             onChange={(e) => setProfessor(e.target.value)}
           >

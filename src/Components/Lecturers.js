@@ -97,30 +97,30 @@ const Professors = () => {
             value={prof_id}
             onChange={(e) => setProfId(e.target.value)}
             type="text"
-            className="addInputBar"
+            className="form-control"
             placeholder="Enter Professor id"
           />
           <input
             value={prof_name}
             onChange={(e) => setProfName(e.target.value)}
             type="text"
-            className="addInputBar"
+            className="form-control"
             placeholder="Enter Professor Name"
           />
           <input
             value={prof_dept}
             onChange={(e) => setProfDept(e.target.value)}
             type="text"
-            className="addInputBar"
+            className="form-control"
             placeholder="Enter Department"
           />
           <button
             onClick={() => {
               addProf();
             }}
-            className="addButton"
+            className="btn btn-md btn-info"
           >
-            <FontAwesomeIcon icon={faPlus} />
+            Add
           </button>
         </div>
       </form>

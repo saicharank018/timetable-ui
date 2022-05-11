@@ -137,28 +137,28 @@ const Courses = () => {
             value={course_id}
             onChange={(e) => setCourseId(e.target.value)}
             type="text"
-            className="addInputBar"
+            className="form-control"
             placeholder="Enter Course id"
           />
           <input
             value={course_name}
             onChange={(e) => setCourseName(e.target.value)}
             type="text"
-            className="addInputBar"
+            className="form-control"
             placeholder="Enter Course Name"
           />
           <input
             value={course_short_form}
             onChange={(e) => setCourseShortForm(e.target.value)}
             type="text"
-            className="addInputBar"
+            className="form-control"
             placeholder="Enter Course short form"
           />
           <input
             value={course_type}
             onChange={(e) => setCourseType(e.target.value)}
             type="text"
-            className="addInputBar"
+            className="form-control"
             placeholder="Enter Course Type"
           />
 
@@ -166,16 +166,16 @@ const Courses = () => {
             value={course_rooms}
             onChange={(e) => setCourseRooms(e.target.value)}
             type="text"
-            className="addInputBar"
+            className="form-control"
             placeholder="Enter Rooms"
           />
           <button
             onClick={() => {
               addProf();
             }}
-            className="addButton"
+            className="btn btn-md btn-info"
           >
-            <FontAwesomeIcon icon={faPlus} />
+            Add
           </button>
         </div>
       </form>
