@@ -92,7 +92,7 @@ const Professors = () => {
     <div>
       <h1 className="appTitle text-center">Add Professors</h1>
       <form>
-        <div className="addBarButtonStyle">
+        <div className="batches">
           <input
             value={prof_id}
             onChange={(e) => setProfId(e.target.value)}
@@ -143,7 +143,7 @@ const Professors = () => {
         <div
           className="bottom"
           style={{
-            height: "200px",
+            height: "220px",
             overflowY: "scroll",
             overflowX: "hidden",
             marginTop: "0px",

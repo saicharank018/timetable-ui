@@ -132,7 +132,7 @@ const Courses = () => {
     <div>
       <h1 className="appTitle text-center">Add Courses</h1>
       <form>
-        <div className="addBarButtonStyle">
+        <div className="batches">
           <input
             value={course_id}
             onChange={(e) => setCourseId(e.target.value)}
@@ -198,7 +198,7 @@ const Courses = () => {
         <div
           className="bottom"
           style={{
-            height: "200px",
+            height: "220px",
             overflowY: "scroll",
             overflowX: "hidden",
             marginTop: "0px",

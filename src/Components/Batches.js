@@ -152,7 +152,7 @@ export const Batch = (props) => {
           <button
             onClick={(e) => submitHandler(e)}
             style={{ width: "80px", height: "40px", padding: "5px" }}
-            className="select-style btn  btn-success"
+            className="add-button btn  btn-success"
           >
             Add
           </button>
@@ -177,7 +177,7 @@ export const Batch = (props) => {
         <div
           className="bottom"
           style={{
-            height: "200px",
+            height: "220px",
             overflowY: "scroll",
             overflowX: "hidden",
             marginTop: "0px",
